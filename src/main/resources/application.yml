@@ -1,0 +1,27 @@
+mybatis:
+  type-aliases-package: com.github.JiangGuangxing.model
+  mapper-locations: classpath:mapper/*.xml
+mapper:
+  mappers: com.github.JiangGuangxing.core.BaseMapper
+  not-empty: false
+  identity: MYSQL
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+spring:
+  freemarker:
+    cache: false
+    request-context-attribute: request
+    settings:
+      template_exception_handler: com.nxin.price2.exceptionHandler.FreemarkerExceptionHandler
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://10.211.253.26:3306/nxin_price2?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+    username: dbn_admin
+    password: oM0bmpKc-O
+    driver-class-name: com.mysql.jdbc.Driver
+
