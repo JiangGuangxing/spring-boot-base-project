@@ -28,8 +28,6 @@ import java.util.Properties;
  * @since 2017/11/1
  */
 @Configuration
-@EnableAutoConfiguration
-@MapperScan("com.github.JiangGuangxing.mapper")//mapper扫描路径
 public class AppConfig extends WebMvcConfigurerAdapter {
 
     /**

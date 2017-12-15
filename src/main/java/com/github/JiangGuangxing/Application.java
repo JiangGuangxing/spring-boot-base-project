@@ -1,5 +1,6 @@
 package com.github.JiangGuangxing;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -14,6 +15,7 @@ import java.io.IOException;
  * @since 2017/11/1
  */
 @SpringBootApplication
+@MapperScan("com.github.JiangGuangxing.mapper")//mapper扫描路径
 public class Application implements CommandLineRunner {
     private Logger LOGGER = LoggerFactory.getLogger(Application.class);
 
